@@ -29,8 +29,8 @@ To setup and run the `lzreposync` service locally, please follow these steps:
 $ git clone https://github.com/waterflow80/lzreposync.git
 $ cd lzreposync
 $ docker-compose up (preferably in another terminal)
-$ pip install -r requirements.txt # note some libraries in this file are not necessary and should have been removed.
-$ python3.8 lzreposync # if you notice an error like `psycopg2.errors.SyntaxError: ... don't worry, it's just sql complaining, we haven't completed formatting yet
+$ pip install -r requirements.txt
+$ python3.8 lzreposync
 
 # Now we can see the metadata saved into our database
 $ docker exec -it db bash
