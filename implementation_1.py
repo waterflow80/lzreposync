@@ -33,7 +33,6 @@ EMPTY_URL_ERROR = "ERROR: URL should not be empty."
 FILENAME_ERROR = "ERROR: Filename should not be empty."
 UNKNOWN_FORMAT = "ERROR: Unknown file format. Can't extract."
 
-
 # ARCHIVE EXTENSIONS
 ZIP_EXTENSION = ".zip"
 TAR_EXTENSION = ".tar"
@@ -82,6 +81,7 @@ def download_primary_xml_v2(url: str, primary_xml: str):
 def parse_primary_xml(file_path):
     handler = PrimaryXmlHandler()
     parser = xml.sax.make_parser()
+    # parser.setFeature(xml.sax.handler.feature_namespaces, True)  # TODO Fix problem (probably for the root tag)
     parser.setContentHandler(handler)
 
     try:
